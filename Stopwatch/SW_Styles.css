@@ -1,0 +1,99 @@
+﻿/* Variabes */
+$orange: #ffa600;
+$grey:#f3f3f3;
+$white: #fff;
+$base-color:$orange;
+/* Mixin's */
+@mixin transition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/*@mixin corners ($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    -khtml-border-radius: $radius;
+}*/
+div {
+    /*width: 100px;
+    height: 100px;*/
+   background-color: rgba(255,0,0, .6);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 20%;
+    min-height: 20%;
+    filter: opacity(60%);
+}
+@keyframes example {
+    from {
+        background-color: rgba(255,0,0, .6);
+    }
+
+    to {
+        background-color: rgba(0,150,255, .6);
+    }
+}
+body {
+    /*background: $base-color;*/
+    /*background-color: rgb(173, 216, 230);*/
+    
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    height: 100%;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 30px auto;
+    color: $white;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: Times, "Times New Roman", Georgia, serif;
+    /*font-family: cursive;*/
+    font-weight: 100;
+    font-size: 2.6em;
+    text-transform: uppercase;
+}
+
+/*#seconds, #tens {
+    font-size: 2em;
+}*/
+
+#seconds, #hours, #minutes{
+    font-size: 2em;
+}
+
+button {
+    @include corners (5px);
+    font-family: "Lucida Handwriting", cursive;
+    background: rgba(180, 255, 180, .6);
+    color: $white;
+    border: solid 1px $white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    /*width: 150px;*/
+    margin: 10px;
+    outline: none;
+    &:hover
+
+{
+    @include transition;
+    background: $white;
+    border: solid 1px $white;
+    color: $base-color;
+}
+}
