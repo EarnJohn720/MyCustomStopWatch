@@ -1,7 +1,7 @@
 window.onload = function () {
 
     var seconds = 00, hours = 00, minutes = 00, tens = 00;
-    
+
     var appendTens = document.getElementById("tens")
     var appendSeconds = document.getElementById("seconds")
 
@@ -58,7 +58,13 @@ window.onload = function () {
         if (tens > 99) {
             console.log("seconds");
             seconds++;
-            appendSeconds.innerHTML = "0" + seconds;
+            if (seconds <= 9) {
+                appendSeconds.innerHTML = "0" + seconds;
+
+            }
+            else {
+                appendSeconds.innerHTML = seconds;
+            }
             tens = 0;
             appendTens.innerHTML = "0" + 0;
         }
@@ -66,6 +72,13 @@ window.onload = function () {
         if (seconds > 59) {
             console.log("minutes");
             minutes++;
+            if (minutes <= 9) {
+                appendMinutes.innerHTML = "0" + minutes;
+
+            }
+            else {
+                appendMinutes.innerHTML = minutes;
+            }
             appendMinutes.innerHTML = "0" + minutes;
             seconds = 0;
             appendSeconds.innerHTML = "0" + 0;
@@ -73,6 +86,12 @@ window.onload = function () {
         if (minutes > 59) {
             console.log("hours");
             hours++;
+            if (seconds <= 9) {
+                appendHours.innerHTML = "0" + hours;
+            }
+            else {
+                appendHours.innerHTML = hours;
+            }
             appendHours.innerHTML = "0" + hours;
             minutes = 0;
             appendMinutes.innerHTML = "0" + 0;
