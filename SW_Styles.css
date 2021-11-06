@@ -45,7 +45,8 @@ div {
 body {
     /*background: $base-color;*/
     /*background-color: rgb(173, 216, 230);*/
-    
+    background: url(sunset_Back.jpg);
+    background-size: cover;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     height: 100%;
 }
